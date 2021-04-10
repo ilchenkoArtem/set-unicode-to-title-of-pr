@@ -6,7 +6,8 @@
   "content_scripts": [
     {
       "matches": [
-        "*://bitbucket.org/**/pull-requests/update/**"
+        "*://bitbucket.org/**/pull-requests/update/**",
+        "*://bitbucket.org/**/pull-requests/new"
       ],
       "js": [
         "content.js",
