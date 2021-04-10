@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unicode Selector</title>
+    <style>
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+        html {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 380px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 12px;
+        }
+
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+        }
+
+        b {
+            user-select: none;
+        }
+
+        i {
+            font-size: 17px;
+            margin-right: 5px;
+            font-style: normal;
+        }
+
+        .action-button {
+            display: flex;
+            align-items: center;
+            background-color: #F6F6F6;
+            cursor: pointer;
+            padding: 3px;
+            border-radius: 3px;
+            margin-bottom: 3px;
+            border: none;
+            outline: none;
+            transition: 0.2s ease-in-out;
+        }
+
+        .action-button:hover {
+            background-color: #E2E1E1;
+        }
+
+        .action-button:active {
+            opacity: 0.6;
+        }
+
+        .action-button--set {
+            text-align: left;
+            margin-right: 5px;
+        }
+
+        .action-button--copy {
+            padding-right: 3px;
+            width: 36px;
+            justify-content: center;
+            background-image: url("./icons/copy.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px;
+            flex-shrink: 0;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="command-list">
+    <li id="⚡" class="command-list__item" data-js="icon-action-item">
+        <button
+            class="action-button action-button--set"
+            title="Set icon to title field"
+            data-js="set-icon"
+        >
+            <i>⚡</i>
+            <b>Для багов и срочных задач в ближайший релиз</b>
+        </button>
+        <button
+            class="action-button action-button--copy"
+            title="Copy icon to clipboard"
+            data-js="copy-icon"
+        ></button>
+    </li>
+    <li id="🍭" class="command-list__item" data-js="icon-action-item">
+        <button
+            class="action-button action-button--set"
+            title="Set icon to title field"
+            data-js="set-icon"
+        >
+            <i>🍭</i>
+            <b>Для редизайнов/тех долгов и несрочных задач</b>
+        </button>
+        <button
+            class="action-button action-button--copy"
+            title="Copy icon to clipboard"
+            data-js="copy-icon"
+        ></button>
+    </li>
+    <li id="🚧" class="command-list__item" data-js="icon-action-item">
+        <button
+            class="action-button action-button--set"
+            title="Set icon to title field"
+            data-js="set-icon"
+        >
+            <i>🚧</i>
+            <b>Для задач которые ожидают реализации серверной части</b>
+        </button>
+        <button
+            class="action-button action-button--copy"
+            title="Copy icon to clipboard"
+            data-js="copy-icon"
+        ></button>
+    </li>
+    <li id="🧸" class="command-list__item" data-js="icon-action-item">
+        <button
+            class="action-button action-button--set"
+            title="Set icon to title field"
+            data-js="set-icon"
+        >
+            <i>🧸</i>
+            <b>Для задач апрув в которых остался получить только от Миши</b>
+        </button>
+        <button
+            class="action-button action-button--copy"
+            title="Copy icon to clipboard"
+            data-js="copy-icon"
+        ></button>
+    </li>
+</ul>
+<script src="./popup.js"></script>
+</body>
+</html>
